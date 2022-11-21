@@ -11,7 +11,6 @@ public class EmployeeWage {
     static final int IS_FULL_TIME = 2;
 
     static final int IS_PART_TIME = 1;
-
     static final int WORKING_HOUR_PER_MONTH = 100;
 
     static final int WORKING_DAYS_PER_MONTH = 20;

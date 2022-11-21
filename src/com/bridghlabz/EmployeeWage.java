@@ -50,7 +50,7 @@ public class EmployeeWage {
             dayCount++;
         }
 
-        System.out.println("WorkingHour =>" + workingHours );
+        System.out.println ("WorkingHour =>" + workingHours );
 
 
 

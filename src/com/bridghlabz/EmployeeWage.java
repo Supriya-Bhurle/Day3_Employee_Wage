@@ -20,8 +20,13 @@ public class EmployeeWage {
     public static void main(String[] args) {
         System.out.println("Welcome to Employee Wage");
 
+        refactor();
+    }
+    public static void refactor(){
+
         int dayCount = 1;
         int workingHours= 0;
+        int totalWage = 0;
 
         while (dayCount <=WORKING_DAYS_PER_MONTH && workingHours <= WORKING_HOUR_PER_MONTH )
         {
@@ -44,14 +49,15 @@ public class EmployeeWage {
                     break;
                 default:
                     System.out.println("Employee is Absent");
-
-
+                    break;
             }
-            System.out.println("Daily Wage for Day " + dayCount + "=>" + dailyWage  );
-            dayCount++;
+
+                dayCount++;
+                totalWage = totalWage + dailyWage;
         }
 
         System.out.println ("WorkingHour =>" + workingHours );
+        System.out.println ("total wage for month" + totalWage );
 
 
 

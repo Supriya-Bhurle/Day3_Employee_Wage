@@ -1,6 +1,12 @@
 package com.bridghlabz;
 
+import java.util.Scanner;
+
 public class EmployeeWage {
+
+    static int  wagePerHour ;
+    static int workingHoursPerMonth ;
+    static int workingDaysPerMonth ;
 
     static final int WAGE_PER_HOUR = 20;
 
@@ -20,6 +26,21 @@ public class EmployeeWage {
     public static void main(String[] args) {
         System.out.println("Welcome to Employee Wage");
 
+        EmployeeWage obj = new EmployeeWage();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your count of company's");
+        int company = sc.nextInt();
+
+        for ( int i = 1 ; i<=company ; i++ ){
+            System.out.println("Enter wage per hour ");
+            wagePerHour = sc.nextInt();
+            System.out.println("Enter workingHoursPerMonth ");
+            workingHoursPerMonth = sc.nextInt();
+            System.out.println("Enter workingDaysPerMonth ");
+            workingDaysPerMonth = sc .nextInt();
+            obj.refactor();
+        }
+
         refactor();
     }
     public static void refactor(){
@@ -27,8 +48,13 @@ public class EmployeeWage {
         int dayCount = 1;
         int workingHours= 0;
         int totalWage = 0;
+        int fullDayHour = 8;
+        int partTimeHour = 4;
+        int isFullTime = 2;
 
-        while (dayCount <=WORKING_DAYS_PER_MONTH && workingHours <= WORKING_HOUR_PER_MONTH )
+
+
+        while (dayCount <WORKING_DAYS_PER_MONTH && workingHours < WORKING_HOUR_PER_MONTH )
         {
 
             int employeeCheck= (int)Math.floor(Math.random()*10) % 3;
